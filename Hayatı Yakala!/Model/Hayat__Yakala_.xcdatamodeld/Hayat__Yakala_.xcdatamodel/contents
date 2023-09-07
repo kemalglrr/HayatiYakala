@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="goalCompletionCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="goalDescription" optional="YES" attributeType="String"/>
+        <attribute name="goalDetails" optional="YES" attributeType="String"/>
+        <attribute name="goalType" optional="YES" attributeType="String"/>
+        <attribute name="validGoalCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="goalcontent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GoalContent" inverseName="goal" inverseEntity="GoalContent"/>
+    </entity>
+    <entity name="GoalContent" representedClassName="GoalContent" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="goalcontent" inverseEntity="Goal"/>
+    </entity>
+</model>
